@@ -20,7 +20,7 @@ const Register = () => {
         // todo - handle error and handle no response
     };
     return (
-        <div>
+        <div className={styles.RegisterComponent}>
             <h1>Register</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicUsername">
@@ -49,15 +49,19 @@ const Register = () => {
                     Register
                 </Button>
                 <br />
-                <Form.Text className="text-muted">
-                    already have an account?
-                </Form.Text>
-                <Button 
-                    variant="outline-info"
-                    type="button"
-                    onClick={() => navigate("/Login")}>
-                    Login Here!
-                </Button>
+                <div className={styles.LoginTextWrapper}>
+                    <Form.Text className="text-muted">
+                        already have an account?
+                    </Form.Text>
+                    <Button 
+                        variant="outline-info"
+                        type="button"
+                        style={{marginLeft:"10px"}}
+                        onClick={() => navigate("/Login")}>
+                        
+                        Login Here!
+                    </Button>
+                </div>
             </Form>
         </div>
     )};

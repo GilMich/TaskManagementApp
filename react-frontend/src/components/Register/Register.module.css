@@ -2,3 +2,12 @@
     display: flex;
     
 } 
+.RegisterComponent{
+    width:50%;
+    }
+
+.LoginTextWrapper{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

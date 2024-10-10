@@ -20,7 +20,7 @@ const Login = () => {
         // todo - handle error and handle no response
     };
     return (
-        <div style={{width:'50%'}}>
+        <div className={styles.LoginComponent}>
             <h1>Login</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicUsername">
@@ -56,7 +56,7 @@ const Login = () => {
                     <Button 
                         variant="outline-info"
                         type="button"
-                        style={{marginLeft:"5px"}}
+                        style={{marginLeft:"10px"}}
                         onClick={() => navigate("/Register")}>
                         Register Here!
                     </Button>
