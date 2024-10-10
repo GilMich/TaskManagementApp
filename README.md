@@ -74,13 +74,7 @@ cd TaskManagementApp
 
 5. **Initialize the SQLite database**:
    The database supposed to automatically deploy when the app starts based on the config.py file.
-   sometimes the db has trouble deplying and you need to run flask run twice when inside the venv.
-   
-   ```bash
-   flask run
-   ```
-
-   This will create a `task_management.db` file in the instance folder with the necessary tables.
+   (sometimes the db has trouble deplying and you need to run flask run press ctrl+c and then flask run again)
 
 7. **Run the backend**:
    Once everything is set up, run the Flask development server:
@@ -88,7 +82,8 @@ cd TaskManagementApp
    ```bash
    flask run
    ```
-
+   This will also  create a `task_management.db` file in the instance folder with the necessary tables.
+   
    The API will be available at `http://127.0.0.1:5000/`.
 
 ---
