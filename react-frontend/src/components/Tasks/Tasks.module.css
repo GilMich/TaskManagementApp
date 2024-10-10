@@ -1,0 +1,62 @@
+.tasksPage {
+    width: 100%;
+    height: 100vh; /* This will make the div take up the full viewport height */
+    max-width: 100%;
+    margin: 0 auto; /* Center the content horizontally if needed */
+    padding: 0; /* Optional padding */
+    display: flex; /* Use flexbox to control layout */
+    flex-direction: column; /* Stack content vertically */
+    background-color: whitesmoke
+}
+
+.accordion{
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Add some padding for spacing */
+}
+.checkboxTaskWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.createTasksWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.createButton{
+    margin-bottom: 2rem;
+}
+.accordionItemWrapper{
+}
+.accordionHeader, .accordionBody {
+    width: 100%; /* Ensures that both the accordion header and body fill the width */
+    box-sizing: border-box; /* Ensures padding and borders are considered in the width */
+}
+
+.accordionBody {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Ensures the body does not grow */
+}
+.accordionItem {
+    width: 100%; /* Ensures that each accordion item fills the width */
+    margin-bottom: 10px;
+}
+.buttonsWrapper {
+    display: flex;
+    justify-content: flex-end; /* Aligns the buttons to the right */
+    gap: 15px; /* Adds space between the buttons */
+}
+
+.actionButton {
+    min-width: 120px; /* Ensures a fixed width for the buttons */
+    flex-shrink: 0; /* Prevents buttons from shrinking */
+}
+.checkBox{
+    margin-right: 1rem;
+}
+
+

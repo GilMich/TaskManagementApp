@@ -1,0 +1,8 @@
+.pageWrapper{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    height: 100vh;
+
+}
