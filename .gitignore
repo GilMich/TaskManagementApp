@@ -1,0 +1,28 @@
+# Back End 
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+
+# virtualenv files 
+.env           # To ignore your environment variables
+.venv          # If using virtualenv, ignore virtual environments
+venv/          # Ignore virtual environment folder
+
+# database files
+*.db
+*.sqlite3
+
+# Front End
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
