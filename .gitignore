@@ -6,9 +6,10 @@ __pycache__/
 .python-version
 
 # virtualenv files 
-.env           # To ignore your environment variables
-.venv          # If using virtualenv, ignore virtual environments
-venv/          # Ignore virtual environment folder
+.env           
+.venv          
+venv/          
+flask-backend/venv/ 
 # database files
 *.db
 *.sqlite3
