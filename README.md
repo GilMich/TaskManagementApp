@@ -1,6 +1,3 @@
-Here's a **GitHub-friendly** markdown format for your README, explaining how to set up the Flask backend and React frontend locally, without the need for Node.js since it's just Flask and React.
-
----
 
 # Task Management App
 
