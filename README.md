@@ -72,15 +72,9 @@ cd TaskManagementApp
    pip install -r requirements.txt
    ```
 
-5. **Set up environment variables**:
-   - Create a `.env` file in the `flask-backend` directory with the following contents:
-     ```bash
-     SECRET_KEY=your_secret_key_here
-     JWT_SECRET_KEY=your_jwt_secret_key_here
-     ```
-
-6. **Initialize the SQLite database**:
-   The database will automatically be created when the app starts, but you can manually initialize it by running:
+5. **Initialize the SQLite database**:
+   The database supposed to automatically deploy when the app starts based on the config.py file.
+   sometimes the db has trouble deplying and you need to run flask run twice when inside the venv.
    
    ```bash
    flask run
@@ -113,13 +107,7 @@ cd TaskManagementApp
    npm install
    ```
 
-3. **Configure environment variables** (optional, if required by your frontend):
-   - You can create a `.env` file in the `react-frontend` directory with the following contents:
-     ```bash
-     REACT_APP_API_URL=http://127.0.0.1:5000
-     ```
-
-4. **Run the React frontend**:
+3. **Run the React frontend**:
 
    ```bash
    npm start
@@ -147,11 +135,3 @@ Once both the Flask backend and React frontend are running, you can interact wit
 - JWT (JSON Web Token) is used for securing the API. Ensure to pass the token in the `Authorization` header when making API requests.
 
 ---
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-This README provides clear instructions on how to set up the backend and frontend locally. Let me know if you need any further modifications!
