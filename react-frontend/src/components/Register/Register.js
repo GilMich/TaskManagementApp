@@ -4,10 +4,28 @@ import ApiService from "../../services/api.service";
 import { useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
+
 const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+    const displayRegisterSuccessMessage = () => {
+        return(
+        <ToastContainer position="top-center" className="p-3">
+            <Toast className="bg-success" onClose={() => setShow(false)} show={show} delay={2000} animation={true} autohide>
+                <Toast.Header>
+                <strong className="me-auto">Register Success</strong>
+                <small>1 second ago</small>
+                </Toast.Header>
+                <Toast.Body className="variant-dark text-white" >User Registered Succesfully!</Toast.Body>
+        </Toast>
+      </ToastContainer>);
+    };
+
     const handleSubmit = async (e) => {
         const resp = await ApiService.Register(username, password);
         console.log(resp);
@@ -15,12 +33,15 @@ const Register = () => {
             alert(resp.error);
         }
         if (resp?.username) {
-            navigate("/Login");
+            setShow(true);
+            setTimeout(() => {
+                navigate("/Login");
+                }, 3000);
         }
-        // todo - handle error and handle no response
     };
     return (
         <div className={styles.RegisterComponent}>
+            {show && displayRegisterSuccessMessage()}
             <h1>Register</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicUsername">

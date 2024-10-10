@@ -4,10 +4,27 @@ import ApiService from "../../services/api.service";
 import { useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import ToastContainer from 'react-bootstrap/ToastContainer';
+import Toast from 'react-bootstrap/Toast';
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+
+    const displayLoginSuccessMessage = () => {
+        return(
+        <ToastContainer position="top-center" className="p-3">
+            <Toast className="bg-success" onClose={() => setShow(false)} show={show} delay={2000} animation={true} autohide>
+                <Toast.Header>
+                <strong className="me-auto">Login Success</strong>
+                <small>1 second ago</small>
+                </Toast.Header>
+                <Toast.Body className="variant-dark text-white">User Logged in successfully !</Toast.Body>
+        </Toast>
+      </ToastContainer>);
+    };
+
     const handleSubmit = async (e) => {
         const resp = await ApiService.Login(username, password);
         console.log(resp);
@@ -15,12 +32,18 @@ const Login = () => {
             alert(resp.error);
         }
         if (resp?.access_token) {
-            navigate("/Tasks");
+            setShow(true);
+            setTimeout(() => {
+                navigate("/Tasks");
+                }, 3000);
         }
         // todo - handle error and handle no response
-    };
+     };
+     
+
     return (
         <div className={styles.LoginComponent}>
+            {show && displayLoginSuccessMessage()}
             <h1>Login</h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicUsername">
