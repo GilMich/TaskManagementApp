@@ -9,7 +9,6 @@ __pycache__/
 .env           # To ignore your environment variables
 .venv          # If using virtualenv, ignore virtual environments
 venv/          # Ignore virtual environment folder
-venv 
 # database files
 *.db
 *.sqlite3
