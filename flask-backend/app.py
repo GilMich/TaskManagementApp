@@ -24,7 +24,11 @@ app.register_blueprint(tasks_bp, url_prefix='/tasks')
 @app.route('/test', methods=['GET'])
 def test_route():
     return "Test route works!"
-
+    
+# Create database tables when the app starts, within the application context
+with app.app_context():
+    db.create_all()  # Create tables when the app starts
+    
 
 if __name__ == '__main__':
 # Create the database tables when nesscesery
