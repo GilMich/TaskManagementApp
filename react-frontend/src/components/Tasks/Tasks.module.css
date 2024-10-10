@@ -58,5 +58,7 @@
 .checkBox{
     margin-right: 1rem;
 }
-
+.descriptionHeader{
+    text-decoration: underline;
+}
 

@@ -49,7 +49,6 @@ const Tasks = () => {
     const newTask = await ApiService.CreateTask(task);
     setTasks([...tasks, newTask]);
     setTask({});
-
     handleToggleModal();
   };
 
@@ -192,6 +191,7 @@ const Tasks = () => {
                     </span>
                   </Accordion.Header>
                   <Accordion.Body className={styles.accordionBody}>
+                    <h5 className={styles.descriptionHeader}>Description:</h5>
                     {task.description}
                     <div className={styles.buttonsWrapper}>
                       <Button
