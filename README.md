@@ -23,7 +23,7 @@ This app allows users to register, log in, and manage their tasks. Tasks can be 
 Before setting up the project, ensure you have the following tools installed:
 
 - **Python 3.6+**
-- - **SQLite 3**
+- **SQLite 3**
 - **Git** (to clone the repository)
 
 ---
